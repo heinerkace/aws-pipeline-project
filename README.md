@@ -105,8 +105,24 @@ job.commit()
 Here’s an example analytics query in Snowflake:
 
 ```sql
-SELECT skill_lvl, COUNT(*) AS games_played
-FROM pickleball_games
-GROUP BY skill_lvl
-ORDER BY games_played DESC;
+--Split matches by team and show game history for each team
+create temporary table win_loss_by_date as
+with split_games as (
+    select game_id, match_id, dt_played, score_diff, winner, w_team_id as team_id
+    from games_data
+    union all
+    select game_id, match_id, dt_played, score_diff, winner, l_team_id as team_id
+    from games_data
+)
+select
+    team_id,
+    dt_played,
+    score_diff,
+    case 
+        when team_id = winner then 'win'
+        else 'loss'
+    end as match_outcome,
+    row_number() over (partition by team_id order by dt_played) as game_history
+from split_games
+order by team_id, game_history;
 ```

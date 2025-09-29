@@ -38,6 +38,13 @@ This AWS data pipeline:
 (screenshots/aws_bucket_with_csv_upload.png)
 (Insert screenshots here — S3 bucket, Glue crawler, Glue job, Snowflake queries)
 
+![PySpark ETL Job Script]
+(screenshots/PySparkETL.png)
+
+
+![Running ETL job with Parameters]
+(screenshots/Run_job_parameters.png)
+
 ---
 
 ## Results
@@ -49,4 +56,4 @@ SELECT skill_lvl, COUNT(*) AS games_played
 FROM pickleball_games
 GROUP BY skill_lvl
 ORDER BY games_played DESC;
-
+```

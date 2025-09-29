@@ -33,17 +33,13 @@ This AWS data pipeline:
 ---
 
 ## Screenshots
-![S3 Upload through Python boto3]
-(screenshots/boto3_upload.png)
-(screenshots/aws_bucket_with_csv_upload.png)
-(Insert screenshots here — S3 bucket, Glue crawler, Glue job, Snowflake queries)
-
-![PySpark ETL Job Script]
-(screenshots/PySparkETL.png)
+![S3 Upload through Python boto3](screenshots/boto3_upload.png)(screenshots/aws_bucket_with_csv_upload.png)
 
 
-![Running ETL job with Parameters]
-(screenshots/Run_job_parameters.png)
+![PySpark ETL Job Script](screenshots/PySparkETL.png)
+
+
+![Running ETL job with Parameters](screenshots/Run_job_parameters.png)
 
 ---
 

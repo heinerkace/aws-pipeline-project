@@ -4,6 +4,15 @@ Hi, thanks for viewing this project!
 
 This is a portfolio project where I practiced AWS pipeline development using a pickleball games dataset.  
 The goal was to build a modern data pipeline that ingests raw data, transforms it, and makes it available for analytics. 
+---
+## Project Overview
+
+Raw CSV data is brought into S3 using Python boto3. After creating a crawler in AWS, I recreated a python program to create and run the crawler
+to crawl the s3 bucket with the raw csv and then output into a Glue Data Catalog. 
+
+I explored the catalog database using an AWS notebook and converted that notebook into a PySpark Script to transform the csv data and output it back into a processed s3 bucket.
+
+I loaded the processed s3 file into Snowflake after created a warehouse and table to house the data, and then wrote some exploratory and analytics queries in SQL. 
 
 ---
 

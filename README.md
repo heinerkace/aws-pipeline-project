@@ -103,6 +103,7 @@ job.commit()
 ## Results
 
 Here’s an example analytics query in Snowflake:
+View the Snowflake folder for all queries and connection scripts.
 
 ```sql
 --Split matches by team and show game history for each team
